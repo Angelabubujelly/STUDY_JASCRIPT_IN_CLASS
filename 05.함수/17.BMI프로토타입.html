@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Bmi(name, height, weight) { 
+            this.userName=name;            
+            this.userHeight=height;
+            this.userWeight=weight;
+        }
+            Bmi.prototype.getInfo = function() {    
+     
+          var str = ""; 
+          str += "이름 : "+this.userName+", ";
+          str +="키 : "+this.userHeight+", ";
+          str +="몸무게 : "+this.userWeight+"<br>";
+          return str;
+
+          }
+        Bmi.prototype.getBmi = function() {
+                var bmi = this.userWeight/((this.userHeight/100)*(this.userHeight/100));
+
+                if(bmi<18.5)
+                    return "저체중";
+                else if(bmi<23)
+                    return "정상체중";
+                else if(26>bmi>24)
+                    return "과체중";
+                else
+                return "비만";
+            
+        }
+        var jang = new Bmi("장길동",180,70);
+        var park = new Bmi("박길동",185,75);
+
+        document.write(jang.getInfo());
+        document.write(jang.getBmi(),"<br>");
+
+        document.write(park.getInfo());
+        document.write(park.getBmi(),"<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

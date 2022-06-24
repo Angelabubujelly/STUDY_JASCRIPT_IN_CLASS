@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var border1 = {"border":"2px dotted yellow"}
+            var bgColor1 = {"background-color":"blue"}
+            var color1 = {"color":"blue"}
+            var border2 = {"border":"2px dotted green"}
+            var bgColor2 = {"background-color":"blueviolet"}
+            var color2 = {"color":"orange"}
+            var bgBorder = {"background-color":"lightblue","border":"2px solid lightgreen"}
+            //나 바로 앞이나 뒤 형제
+            $(".class1").prevAll().css(color1);
+
+            $(".class1 + p").nextAll().css(bgColor2);
+      
+ 
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="class1">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          var today = new Date();
+        var nowMonth = today.getMonth()+1;
+        nowDate = today.getDate();
+        nowDay = today.getDay();
+        var dayString = "";
+        switch(nowDay) {
+            case 0: dayString ='일';break;
+            case 1: dayString='월' ;break;
+            case 2: dayString='화';break;
+            case 3: dayString='수';break;
+            case 4: dayString='목';break;
+            case 5: dayString='금';break;
+            case 6: dayString='토';
+        }
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write("현재 월 : " + nowMonth,"<br>");
+        document.write("현재 일 : " + nowDate,"<br>");
+        document.write("현재 시 : " + nowDate,"<br>");
+        document.write("현재 분 : " + nowDate,"<br>");
+        document.write("현재 요일 : " + dayString,"<br>");
+    </script>
+</head>
+<body>
+    <br><br>
+    <input type="button" value="이전 페이지로 이동" onclick="history.back();">
+    <input type="button" value="다음 페이지로 이동" onclick="location.href='24.prac3page.html'">
+
+</body>
+</html>

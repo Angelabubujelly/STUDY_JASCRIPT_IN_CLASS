@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+
+            var color1 = {"color":"blue"}
+            var bgColor2 = {"background-color":"yellow"}
+
+            $("li").slice(1,2).css(color1);
+            $("li").slice(2,5).css(bgColor2);
+        });
+    </script>
+</head>
+<body>
+    <h1>위치 탐색 선택자</h1>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+        <li>내용6</li>
+        <li>내용7</li>
+        <li>내용8</li>
+    </ul>
+
+
+</body>
+</html>

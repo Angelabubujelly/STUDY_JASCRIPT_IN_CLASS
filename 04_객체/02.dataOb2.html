@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today =new Data();
+        var endDay = new Date(2022,8,8)+1;
+        var diffDate = endDay.getTime()-today.getTime();
+        // 1초 = 1000 밀리세컨드, 1분 = 1000 * 60, 1시간 = 1000*60*60, 1일 = 1000*60*60*24
+        var result =Math.ceil(diffDate /(1000*60*60*24));
+        document.write('<h2>종강일까지 남은 날짜</h2>');
+        document.write(result+"일");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var border1 = {"border":"2px dotted yellow"}
+            var bgColor1 = {"background-color":"blue"}
+            var color1 = {"color":"blue"}
+            var border2 = {"border":"2px dotted green"}
+            var bgColor2 = {"background-color":"blueviolet"}
+            var color2 = {"color":"orange"}
+            var bgBorder = {"background-color":"lightblue","border":"2px solid lightgreen"}
+
+            $(".btn1").click(function(){
+            $(".text1").css(bgColor1);
+        });
+        $(".btn2").click(function(){
+            $(".text2").css(color2);
+        });
+        $(".btn3").on("click",function(){
+           $(".text3").css(bgBorder);
+        });
+        $(".btn4").dblclick(function(){
+        $(".text4").css(bgColor1);
+    });
+
+        $(".btn5").dblclick(function(){
+        $(".text5").css(border1);
+      
+        });
+     });
+    </script>
+</head>
+<body>
+    <button class="btn1">버튼1</button>
+    <p class="text1">내용1</p>
+    <button class="btn2">버튼2</button>
+    <p class="text2">내용2</p>
+    <button class="btn3">버튼3</button>
+    <p class="text3">내용3</p>
+    <button class="btn4">버튼4</button>
+    <p class="text4">내용4</p>
+    <button class="btn5">버튼5</button>
+    <p class="text5">내용5</p>
+</body>
+</html>

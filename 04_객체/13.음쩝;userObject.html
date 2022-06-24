@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 떢꼬치 0523 3번 연습 참고!
+        // es5이하 버전
+        var tv = new Object();
+        tv.compalny = "삼성";
+        tv.price = 30000;
+             // function()이 드가면 다 메소드?
+        tv.info = function(){
+            document.write("tv 회사" + this.compalny,"<br>")            
+            document.write("tv 가격" + this.price,"<br>")
+        }
+        var car={
+            color: 'black',
+            price: 10000,
+            info: function(){
+                document.write("car 색상 : "+this.color,"<br>");
+                document.write("car 가격 : "+this.price,"<br>");
+                
+            }
+        }
+        document.write("<h2> tv 객체 메서드 호출</h2>");
+        tv.info();
+               // // 얘는 메서드기때문에 괄호 필 요 없음.
+            // tv.info();
+        document.write("<h2> car 객체 메서드를 호출 </h2>");
+        car.info();
+
+        // es6 버전
+               //     // 변수 선언 안해도 된디야
+        class Tv2 {
+            constructor(company, price){
+                this.company = company;
+                this.price = price;
+            }
+            info(){
+                document.write("tv의 회사 : ", this.company, "<br>");
+                document.write("tv의 가격 : ", this.price, "<br>");
+            }
+        }
+
+        var tv2 = new Tv2("LG", 20000);
+        document.write("<h2>의 tv2 객체 메서드 호출 </h2>");
+        tv2.info()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

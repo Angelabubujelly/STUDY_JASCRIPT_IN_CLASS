@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 미디어쿼리를 의미혀
+                if(window.matchMedia("prefers-color-scheme:dark").matches){
+                    document.documentElement.classList.add("dark");
+                }
+                document.getElementById("toggleTheme").addEventListener("click",function(){
+                document.documentElement.classList.toggle("dark");
+            })
+        })
+    </script>
+    <style>
+        html.dark{background-color: #0c1d0e; color: white;}
+        
+    </style>
+</head>
+<body>
+    <button id="toggleTheme">테마토글</button>
+    <p>모두에게 떡꼬치를 먹일테야♡</p>
+</body>
+</html>

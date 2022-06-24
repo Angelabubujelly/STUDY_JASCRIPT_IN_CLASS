@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var bgColor1 = {"background-color":"lightsalmon"}
+            var bgColor2 = {"background-color":"yellow"}
+            var color1 = {"color":"blue"}
+            var color2 = {"color":"red"}
+            var border = {"border":"2px dotted lavender"}
+            var bgBorder = {"background-color":"lightblue","border":"2px solid lightgreen"}
+         
+// /가장 가까운 ul과
+            $(".item_a").closest("ul").css(bgColor1);
+                     
+// 부모격인 ul에게 모두]] 적용...
+            // $(".item_a").parents("ul").css(border);
+            $(".item_a").parent("ul").css(border);
+        });
+    </script>
+</head>
+<body>
+    <ul>
+            <li>Ⅰ.</li>
+            <li>Ⅱ.
+                <ul>
+                    <li class="item_a">A.</li>
+                    <li>B.
+                        <ul>
+                            <li class="item_b">1.</li>
+                            <li>2.</li>
+                            <li>3.</li>
+                        </ul>
+                    </li>
+                    <li>C.</li>
+                </ul>
+            </li>
+            <li>Ⅱ.</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js""></script>
+    <script>
+        $(function(){
+            var bgColor1 = {"background-color":"lightsalmon"}
+            var bgColor2 = {"background-color":"yellow"}
+            var color1 = {"color":"blue"}
+            var color2 = {"color":"red"}
+            var border = {"border":"2px dotted lavender"}
+            var bgBorder = {"background-color":"lightblue","border":"2px solid lightgreen"}
+         
+            $("#inner1").find(".txt1").css(bgColor1);
+            $("#inner1 p").filter(".txt2").css(color1);
+            /* filter(function() {})함수의 인자값으로 익명 함수를 전달하여
+               익명 함수가 true를 반환하면 해당 요소를 선택함. */
+            $("#inner2 p").filter(function(idx, obj){
+
+                /* console.log(inx)는 인덱스번호 출력,
+                   console.log(obj)는 내용 출력 */
+                console.log(idx);
+                console.log(obj);
+
+ // 모든 p태그에 css값은 다 들어오지만 조건식에 해당되는 것만 css가 반환돼서 적용됨...
+                return idx %2 ==0; }).css(bgColor2);
+
+ /*            
+            응용의 예ㅔㅔㅔㅔ시ㅣㅣㅣㅣㅣㅣ
+            :   var a= 0;
+                if(idx%2==-0)
+                a=5;
+                return idx%3==0;
+                */
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1> 콘텐츠 탐색 선택자</h1>
+        <section id="inner1">
+            <h2>find(), filter()</h2>
+            <p> 내용1 </p>
+            <p class="txt1">내용2 </p>
+            <p class="txt2"> 내용3</p>
+        </section>
+        <section id="inner2">
+            <h2>filter(function)</h2>
+            <p> index0 </p>
+            <p> index1 </p>
+            <p> index2 </p>
+            <p> index3 </p>
+            <p> index4 </p>
+            <p> index5 </p>
+        </section>
+    </div>
+</body>
+</html>

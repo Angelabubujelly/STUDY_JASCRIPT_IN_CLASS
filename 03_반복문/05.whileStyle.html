@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {background-color: lightblue;}
+        .red {background-color: salmon;}
+    </style>
+    <script>
+        var i =1;
+        while(i<=10){
+            if(i%2==0) {
+                // 밖이 외따옴표면 안쪽은 쌍따옴포료... 반대도 마찬가지
+                document.write('<p class="blue">' + i + '</p>');
+            }else
+                document.write('<p class="red">'+i+'</p>');
+            i++;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

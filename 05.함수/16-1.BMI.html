@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name ='';
+        var height = 0;
+        var weight = 0;
+
+        function userInfo(){
+        var name = prompt("이름을 입력하세요");
+        var height = prompt("키를 입력하세요");
+        var weight = prompt("몸무게를 입력하세요");
+
+        return document.write("이름 : "+ name + ", 키 : " + height +", 몸무게 : "+ weight)
+        
+    
+
+           function cal(){
+            var result = userWeight/((userHeight/100)*(userHeight/100));
+            if(result<18.6)
+            return document.write("저체중입니다.");
+           
+            if(18.4<result<23)
+            return document.write("정상체중입니다.");
+            
+            if(23<result<25)
+            return document.write("과체중입니다.");
+
+            if(result>26)
+            return document.write("비만입니다!!!!");
+            
+            cal();
+        }
+    }
+
+    userInfo();
+        
+      
+
+
+  
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

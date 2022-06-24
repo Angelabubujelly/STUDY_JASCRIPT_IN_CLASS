@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("div a[target]").css({"color":"orange"});
+            $("div a[href^=http]").css("color","yellowgreen");
+            $("div a[href$=net]").css("background-color","yellow");
+            $("div a[href*=google]").css("color","orange");
+            $("#form1 :text").css("background-color","salmon");
+            $("#form1 :password").css("background-color","pink");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p><a href="https://www.naver.com" target="_blank">Naver</a></p>
+        <p><a href="http://jiwon.kosl.co.kr">Propessor</a></p>
+        <p><a href="http://google.com">Google</a></p>
+        <p><a href="https://daum.net">Daum</a></p>
+    </div>
+    <form method="get" action="25.array_index.html" id="form1">
+        <p>
+            아이디 <input type="text" name="user_id" id="user_id">
+        </p>
+        <p>
+            비밀번호<input type="password" name="user_pw" id="user_pw">
+        </p>
+    </form>
+</body>
+</html>

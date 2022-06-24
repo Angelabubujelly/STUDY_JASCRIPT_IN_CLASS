@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Bmi(name, height, weight) { //함수명은첫글자 대문자??
+                                            // 객체 생성자 함수 만들기!
+            this.userName=name;             //this.속성명 = 새 값;
+            this.userHeight=height;
+            this.userWeight=weight;
+
+            this.getInfo = function() {     //this.함수명=function(){JSP 코드}}
+         //(1번) 변수 str에 저장해서 만들기...
+          var str = ""; 
+          str += "이름 : "+this.userName+", ";
+          str +="키 : "+this.userHeight+", ";
+          str +="몸무게 : "+this.userWeight+"<br>";
+          return str;
+
+        //(2번)
+        //  return "이름 : "+this.userName+", 키 : "+this.height+", 몸무게 : "+this.weight+"<br>";
+        }
+            this.getBmi = function() {
+                var bmi = this.userWeight/((this.userHeight/100)*(this.userHeight/100));
+
+                if(bmi<18.5)
+                    return "저체중";
+                else if(bmi<23)
+                    return "정상체중";
+                else if(26>bmi>24)
+                    return "과체중";
+                else
+                return "비만";
+            }
+        }
+        var jang = new Bmi("장길동",180,70);
+        var park = new Bmi("박길동",185,75);
+
+        document.write(jang.getInfo());
+        document.write(jang.getBmi(),"<br>");
+        document.write(park.getInfo());
+        document.write(park.getBmi(),"<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

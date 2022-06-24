@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //부모 중에서도 ㅁ만  적용하고싶으면 .parents()괄호 안에 ㅁ 입력
+            $("#id1").parents("section").css("border","2px dotted lightgreen");
+            $("#id2").parents("div").css({
+                "color":"lightblue",
+                "background-color":"ivory"
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>부모요소들 선택자</h1>
+    <section>
+        <div>
+            <p>음음</p>
+            <p id="id1">내용들1</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p id="id2">내용들2</p>
+        </div>
+    </section>
+</body>
+</html>

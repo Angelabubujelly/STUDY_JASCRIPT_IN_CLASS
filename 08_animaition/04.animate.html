@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").on("click",function(){
+                $(".move1").animate({
+                    marginLeft:400,
+                    fontSize:30},2000,"linear",
+                    function(){
+                    alert("이동했습니다.");
+                })
+            })
+
+            $(".btn2").on("click",function(){
+                $(".move2").animate({
+                    // 따옴표로 묶어줘 += 문자취급이라.. 그리고 숫자랑 붙여적어.
+                    marginLeft:'+=50'
+                },1000,"linear");
+                
+            })
+        });
+    </script>
+    <style>
+        span {background-color: lavender;}
+    </style>
+</head>
+<body>
+    <br><button class="btn1">버튼1</button>
+    <span class="move1">"400px 이동"</span>
+    <br><button class="btn2">버튼2</button>
+    <span class="move2">"50px씩 이동합니다.</span>
+    <br><button class="btn3">버튼3</button>
+</body>
+</html>

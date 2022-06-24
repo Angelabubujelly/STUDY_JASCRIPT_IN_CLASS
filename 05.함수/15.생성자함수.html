@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function comFactory(cpuInfo,ramInfo, hddInfo){//얘 사용하려면 객체 생성해야해
+         this.cpu =cpuInfo; //생성할 때 바로 호출되면서... 음.. instance변수라고 생각해..
+         this.ram =ramInfo; //객체가 생성될 때 그 안에 생성되는 변수,,?
+        this.hdd = hddInfo;
+
+        //익명함수 선언
+        this.totalInfo = function() { 
+         //   function kkk() <- 이게 일반 함수
+         document.write("제조업체 : 이젠전자<br>");
+         document.write("시스템정보 : 64bit 운영체제<br>");
+        }
+        var cpu1 = cpuInfo;
+        }
+        var com = new comFactory("5GHz","16GB","2TB");
+        document.write("hdd : "+ com.hdd+ " ram : "+ com.ram+ " cp1 : " +com.cp1,"<br>");
+        com.totalInfo();
+        //cpu, ram은 전역변수고, cp1는 지역변수라 함수 밖에서 사용 불가!!!!!!!
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

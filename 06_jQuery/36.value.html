@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var result = $("#name").val();
+        console.log("#name의 value에 들어있는 값 : "+result);
+        $("#idd").val("사랑해");
+
+        var result2 = $("#idd").val();
+        console.log("#idd의 value에 들어있는 값 : " + result2);
+
+        var result3 = $("#idd").prop("defaultValue");
+        console.log("#idd의 value의 원본 값 : " +result3);
+   
+        });
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+<form action="">
+    <label for="name">이름</label>
+    <input type="text" name="name" id="name" value="밤블비"><br>&ensp;
+    <label for="id">ID</label>
+    <input type="text" name="id" id="idd" value="blebee">
+</form>
+</body>
+</html>

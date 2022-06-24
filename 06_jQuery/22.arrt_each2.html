@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>                                                            
+                                                                    /* 옆으로 쌓깅 */
+        div{width:100px; height:100px; background-color: lightgreen; float: left; transition-duration: .3s;}
+    </style>
+    <script>
+        $(function(){
+// 애니메이션을 여러개에 적용할 땐 .on
+           $("div").on({
+               'mouseover':function(){
+                   $('div').each(function(index){
+                       $(this).css({"background-color":"lightblue","transition-delay":index*0.1 +"s"})
+                   });
+               },
+               'mouseout':function(){
+                   $('div').each(function(index){
+                       $(this).css({"background-color":"orange","transition-delay":index*0.1+"s" })
+                   });
+               }
+           })
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

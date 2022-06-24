@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+                             //두가지 이벤트를 적용.. 마우스가 안으로 들어오고...
+            $(".btn_wrap").delegate(".btn1","mouseover focus",function(){
+                alert("Hello");
+            })
+            $(document).one("mouseover focus", ".btn2", function(){
+                alert("WELCOME");
+            })
+        });
+
+
+    </script>
+</head>
+<body>
+    <p class="btn_wrap">
+        <button class="btn1">버튼1</button>
+    </p>  
+      <p>
+        <button class="btn2">버튼2</button>
+    </p>
+
+</body>
+</html>
+
+<!-- 
+    <script>
+$(function(){
+	$(".btn_wrap").delegate(".btn_1.on", 
+	"mouseover focus", function() {
+		alert("HELLO!");
+	});
+	$(".btn_1").addClass("on");
+
+	$(document).one("mouseover focus", 
+	".btn_2.on", function() {
+		alert("WELCOME!");
+	});
+	$(".btn_2").addClass("on");
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<p class="btn_wrap">
+		<button class="btn_1">버튼1</button>
+	</p>
+	<p><button class="btn_2">버튼2</button></p>
+</div>
+</body>
+</html>
+ -->

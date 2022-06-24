@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var name = prompt("당신 이름의 이니셜을 입력하시오.","lmh");
+        // var num = prompt("당신의 전화번호를 입력하시오.","01012345678");
+        // document.write("당신의 이름은 : "+ name.toUpperCase(),"<br>");
+        // document.write("당신의 전화번호는 : "+num.substring(0,7)+"****");
+        
+        var name = prompt("당신의 영어 이름을 넣으시오");
+        var upName = name.toUpperCase();
+        document.write("당신의 이름은 : "+ upName,"<br>"); 
+
+        var phone = prompt("당신의 전화번호를 입력하시오.","01012345678");
+        var result = phone.substring(0,phone.length-4) + "****";
+        document.write("당신의 전화번호는 : "+result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

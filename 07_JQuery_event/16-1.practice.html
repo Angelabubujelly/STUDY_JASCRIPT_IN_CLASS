@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<style>
+	body{font: 14px Malgun Gothic, "맑은고딕",sans-serif;}
+	.zoomBtnZone{font-size: 14px;}
+</style>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+	var basicFontSize = 13;
+	$(".pm button").on("click", zoomInOut);
+    
+	function zoomInOut( ) {
+		if($(this).hasClass("zoomOutBtn")){
+			if(basicFontSize<=13) return false;
+			basicFontSize--;
+		} else if($(this).hasClass("zoomInBtn")){
+			if(basicFontSize>=200) return false;
+			basicFontSize++;
+		} else {
+			basicFontSize = 13;
+		}
+		$(".fontSize").text(basicFontSize + "px");
+		$("body").css({fontSize:basicFontSize + "px"});
+        $(".fontSize").text(size);
+	}
+});
+</script>
+</head>
+<body>
+	<p class="pm">
+		<button class="zoomOutBtn">-</button>
+		<button class="zoomInBtn">+</button>
+	</p>
+	<p class="fontSize"><span id="size"></span></p>
+	<div id="wrap">
+		Someone say what's going on
+대체 어떻게 넌
+너와 정반대인 앨 만나니
+나도 모르겠어 But
+I know 계속해서
+서로에게 끌려 막
+넌 빨간 장미를 좋아해
+넌 파란 바다를 좋아해
+But I like violet 또
+가고 싶어 산으로
+우린 정반대인 거야
+그래서 더 특별한 거야
+It seems like
+마치 Blue orangeade처럼
+We like we like we like
+컴컴한 세상 그 속에
+넌 내 제일 멋진 색인걸
+Girl I need it need it need it need it babe
+Need need it need it
+정반대 같은 보색
+이 세계를 색칠하고 싶어
+우리끼리 끼리 끼리 끼리 Babe
+우리끼리 끼리
+Say woah
+우리끼리 Babe
+Say woah
+Won't you give it to me?
+정반대 같은 보색
+너와 함께하고 싶어
+우리끼리 끼리 끼리 끼리 Babe
+우리끼리 끼리
+아침을 좋아하는 너
+또 아침에 잠에 들 나
+When I say good morning
+You say good night
+Hey
+You like 2Pac I like biggie biggie
+넌 강아지 난 Kitty kitty
+우린 S 또 N 자석 같아
+네 옆에 존재해야 완벽한걸
+넌 빨간 장미를 좋아해
+넌 파란 바다를 좋아해
+But I like violet 또
+가고 싶어 산으로
+우린 정반대인 거야
+그래서 더 특별한 거야
+It seems like (Seems like)
+마치 Blue orangeade처럼
+We like we like we like
+컴컴한 세상 그 속에
+넌 내 제일 멋진 색인걸
+Girl I need it need it need it need it babe
+Need need it need it
+정반대 같은 보색
+이 세계를 색칠하고 싶어
+우리끼리 끼리 끼리 끼리 Babe
+우리끼리 끼리
+너는 내 삶의 중심 (삶의 중심)
+너는 내 맘의 불빛 (맘의 불빛)
+-1+(+1)
+I can stay young cuz of you
+겨울이 지나가듯이
+네가 날 꽃필 수 있게 해 줘
+차가운 나를 녹여줘 Whoo
+Oh yeah yeah yeah
+컴컴한 세상 그 속에
+넌 내 제일 멋진 색인걸
+Girl I need it need it need it need it babe
+Need need it need it
+정반대 같은 보색
+이 세계를 색칠하고 싶어
+우리끼리 끼리 끼리 끼리 Babe
+우리끼리 끼리
+Say woah
+우리끼리 Babe
+Say woah
+Won't you give it to me?
+정반대 같은 보색
+너와 함께하고 싶어
+우리끼리 끼리 끼리 끼리 Babe
+우리끼리 끼리
+	</div>
+</body>
+</html>

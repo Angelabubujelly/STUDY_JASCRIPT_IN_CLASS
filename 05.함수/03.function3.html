@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count = 0;
+        // 일반 함수는 어디서든 호출가능
+        myFun();
+        function myFun(){
+            count++;
+            document.write("javascript"+count + "<br>");
+        }
+        // 익명함수는 반드시 함수구현한 후 호출해야 됨
+      var varFun = function() {
+        count++;
+            document.write("javascript"+count + "<br>");
+      }
+      myFun();
+      varFun();
+   
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

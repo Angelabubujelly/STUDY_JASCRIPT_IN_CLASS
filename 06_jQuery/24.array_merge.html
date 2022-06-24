@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var arr1 =["인천","서울","부산","대구","전주"];
+            var arr2 =["한국","미국","중국","일본"];
+            var num = 6;
+
+            var idxNum = $.inArray("부산",arr1);
+            var arrOk = $.isArray(arr1);
+            var arrOk2 = $.isArray(num);
+    
+
+            document.write("부산의 indx번호 : "+idxNum+"<br>");
+            document.write("arr1이 배열 객체인가? : " + arrOk+"<br>");
+            document.write("num이 배열 객체인가? : " + num+"<br>");
+
+            // arr2에 arr1을 넣으시오...
+            $.merge(arr2,arr1);
+            document.write("arr2와 arr1을 병합 : "+arr2);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

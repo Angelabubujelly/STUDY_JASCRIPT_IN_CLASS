@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write('<h1>가위,바위,보 맞추는 게임</h1>');
+        var user = prompt("가위, 바위 보 중 선택하세요");
+        var userNum;
+        switch(user){
+     
+            case "가위":
+            userNum=1;
+                document.write('<img src = "img/가위.png">');
+                break;
+            case "바위":
+            userNum=2;
+            document.write('<img src = "img/바위.png">');
+            break;
+            case "보" :
+            userNum=3;
+                document.write('<img src = "img/보.png">');
+        }
+        var com = Math.ceil(Math.random() * 3);
+        document.write('<img src = "img/'+com+',png">');
+        if(userNum==com) {
+            document.write('<h3>맞췄습니다.</h3>')
+        } else
+        document.write('<h3>틀렸습니다.</h3>')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

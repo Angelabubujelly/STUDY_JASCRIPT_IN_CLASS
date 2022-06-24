@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            var arrSubject = ["국어", "수학", "영어"];
+
+        function score (arrData){
+            var sum = 0; //합계를 낼 변수 하나 주고
+            for(var i = 0; i<arrData.length;i++){
+              sum += Number(prompt(arrData[i]+ "점수를 입력하세요.")); //덧셈하려면 반드시 형변환!
+        }
+        document.write("총점 : "+ sum,"<br>");
+        return sum/arrData.length;
+        
+    }
+   var avg = score(arrSubject)
+    document.write("평균 : "+ avg + "점");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+      body{text-align: center;}
+        img{width: 45vh; margin: 10px;}
+    </style>
+    <script>
+        $(function(){
+            $("img").hover(function(){
+        // 나자신, 이미지!
+                $(this).css("border","7px dotted green")}
+                ,function(){
+                    $(this).css({"border":"none"})
+                });
+            $("#btn1").click(function(){
+                //img의첫번째것만 클론하시오
+                $("img:first").clone(true).appendTo($("div"));
+            });      
+                  $("#btn2").click(function(){
+                $("img:first ").clone().appendTo($("div"));
+            });
+//  true가 안 들어있으면 그저 사진만 복사하고 안의 하위요소는 복제 X
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1">deep copy : clone(true)</button>
+    <button id="btn2">copy : clone()</button>
+    <div><img src="img/FBDF8858-B9FC-44FE-9D6E-B126EDC0EB52-1882-000000BA0C34CD17_file.gif" alt=""></div>
+</body>
+</html>

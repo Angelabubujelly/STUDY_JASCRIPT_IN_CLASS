@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        img{width:80vw; border: 5px dotted rgb(253, 219, 198);}
+    </style>
+    <script>
+        $(function(){
+            var result1 = $("img").attr("src");
+            console.log(result1);
+            $("img").attr("src","img/efg.png");
+            $("img").attr({
+                "width":100,
+                 "src":result1.replace("img/hij.png","img/abc.png")
+                });
+      //보더 다시해야댐      $("img").removeAttr("border");
+        });
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <section>
+        <h2>이미지 속성</h2>
+        <img src="img/hij.png" alt="너어어어어어무예뽀윈리♡음쪽">
+    </section>
+</body>
+</html>

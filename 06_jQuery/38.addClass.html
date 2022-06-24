@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lightgreen{background-color: lightgreen;}
+        .blueviolet{background-color: blueviolet;}
+        .skyblue{background-color: skyblue;}
+        .bgcolor1{background-color: yellow;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+$("#p1").addClass("bgcolor1");
+$("#p2").removeClass("lightgreen");
+$("#p6").toggleClass("lightgreen");
+// tollgleClass는 내용물이 있으면 없애주고 없으면 만들어주는..
+$("#p4").toggleClass();
+$("#p3").toggleClass("blueviolet");
+
+/* 얘를 간단히 해볼게유
+$("#p5").hasClass("skyblue");
+$("#p6").text("skyblue");
+*/
+$("#p6").text($("#p5").hasClass("skyblue"));
+
+
+
+    });
+    </script>
+</head>
+<body>
+    <p id="p1">내용1</p>
+    <p id="p2" class="lightgreen">내용2</p>
+    <p id="p3">내용3</p>
+    <p id="p4" class="blueviolet">내용4</p>
+    <p id="p5" class="skyblue">내용5</p>
+    <p id="p6">내용6</p>
+
+</body>
+</html>

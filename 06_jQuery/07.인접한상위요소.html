@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var border1 = {"border":"2px dotted lightblue"};
+            var border2 = {"border":"2px dotted lightgreen"};
+            var bgColor1 = {"background-color":"ivory"};
+            var bgColor2 = {"background-color":"beige"};
+
+            $(".item").closest("li").css(border1);
+            $(".item").parents().css(border2);
+            $(".item2").parent().css(bgColor1);
+            $(".item2").closest("li").css(bgColor2);
+
+        });
+    </script>
+</head>
+<body>
+    <h1>인접한 상위요소 선택자</h1>
+<ul>
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3
+        <ul>
+            <li>List3_1</li>
+            <li>List3_2</li>
+            <li>List3_3
+                <ul>
+                    <li class="item">리스트3_3_1</li>
+                    <li>리스트3_3_2</li>
+                    <li>리스트3_3_3</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="item2">list 4</li>
+</ul>
+</body>
+</html>

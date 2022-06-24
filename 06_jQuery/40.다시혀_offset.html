@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap {width: 300px; height: 200px; margin: 50px; background-color: lemonchiffon; position: relative;}
+        .box {width: 50px; height: 50px;position: absolute; left:50px; top:80px;background-color: lightblue;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var off = $(".box").offset().top
+            var pos = $(".box").position().top
+            console.log("offset-top : "+off)
+            console.log("position-top :"+pos)
+
+            $(".abpox span").text(off)
+            $(".repox span").text(pos)
+
+
+           var off2 =$(".box").offset().left
+          var pos2 =$(".box").position().left
+         console.log("offset-left : "+off2)
+         console.log("position-left : "+pos2)
+ 
+        })
+
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">box</div>
+    </div>
+    <p class="abpoX">절대 top 위칫값 : <span></span></p>
+    <p class="repoX">상대 top 위칫값 : <span></span></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+$(function(){
+    var result1 = $("#chk1").prop("checked");
+    console.log(result1)
+    var result2 = $("#chk2").prop("checked");
+    console.log(result2);
+    $("#chk3").prop("checked", true);
+    
+    var result3 =$("#chk1").prop("tagName");
+    console.log("chk1의 Tag 이름은 : "+result3);
+
+   var result4 = $("#se1").prop("selectedIndex");
+   console.log("선택된 indexNum : "+result4);
+});
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+<form action="">
+    <input type="checkbox" name="chk1" id="chk1">
+    <label for="chk1">체크1</label>
+    <input type="checkbox" name="chk2" id="chk2" checked>
+    <label for="chk1">체크2</label>
+    <input type="checkbox" name="chk3" id="chk3">
+    <label for="chk3">체크3</label><br>
+<select name="" id="se1">
+    <option value="opt1">option1</option>
+    <option value="opt2">option2</option>
+    <option value="opt3" selected>option3</option>
+</select>
+</form>
+</body>
+</html>

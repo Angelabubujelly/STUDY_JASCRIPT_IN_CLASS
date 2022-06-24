@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var text1 = "web js hi city";
+        var text2 = " welcome";
+        document.write("원본 : "+text1,"<br>");
+        document.write("굵게 : "+text1.bold(), "<br>");
+        document.write("길이 : "+text1.length, "<br>");
+        document.write("대문자로 : "+text1.toUpperCase(), "<br>");
+        document.write("소문자로 : "+text1.toLowerCase(), "<br>");
+        document.write("첫 i의 인덱스 번호 : "+text1.indexOf("i"), "<br>");
+        document.write("끝 i의 인덱스 번호 : "+text1.lastIndexOf("i"), "<br>");
+        document.write("인덱스 4번의 문자 : "+text1.charAt(4), "<br>");
+        document.write("인덱스 4번~5번의 문자 : "+text1.substring(4,6), "<br>");
+        document.write("인덱스 4번부터 2개 : "+text1.substr(4,2), "<br>");
+        document.write("일치하는 문자를 찾아 변환 : "+text1.replace("web", "bye"), "<br>");
+        document.write("인덱스 7번~8번만 가져와 반환 : "+text1.slice(7,9), "<br>");
+        document.write("새로운 문자열 추가 (1) : "+text1.concat(" welcome"), "<br>");
+        document.write("새로운 문자열 추가 (2) : "+text1.concat(text2), "<br>");
+        document.write("지정한 문자를 기준으로 데이터를 나누 배열에 저장->반환 : "+text1.split("i"), "<br>");
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

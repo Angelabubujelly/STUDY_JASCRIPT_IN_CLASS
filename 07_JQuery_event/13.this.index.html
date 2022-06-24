@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-한국광고박물관dscale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+$(function(){
+    $(".menu1").on("click",function(e){
+        $(".menu1 span").css("background-color","lavender")
+    //  this : 이벤트가 발생한 나 자신!에게 css를 적용하시오.
+        $(this).css("background-color","beige");
+    });
+    $(".menu2 span").on("click",function(e){
+//  this : 이벤트가 발생한 나 자신!의 인덱스번호를 가져오시오.
+    var idx = $(".menu2 span").index(this);
+    $(".menu2 span").eq(idx).css("background-color","red");
+    $(".indexNum").text(idx);
+    });
+    
+
+});
+    </script>
+</head>
+<body>
+    <h2>$(this)</h2>
+<ul class="menu1">
+    <li><span>메뉴1</span></li>
+    <li><span>메뉴2</span></li>
+    <li><span>메뉴3</span></li>
+</ul>
+<h2>index</h2>
+<ul class="menu2">
+    <li><span>메뉴4</span></li>
+    <li><span>메뉴5</span></li>
+    <li><span>메뉴6</span></li>
+</ul>
+<p>현재 위치의 인덱스 번호 :<span class="indexNum"></span></p>
+</body>
+</html>

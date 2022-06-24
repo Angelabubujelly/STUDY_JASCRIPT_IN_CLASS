@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{text-align: center;}
+#gallery{width:400px; height:430px; }
+    </style>
+    <script>
+        var num=1;
+        function nextGallery(){
+            num++;
+            if(num>7)
+            num=1;
+            document.getElementById("gallery").src="img/img"+num+".png";
+        }
+        function prevGallery(){
+            num--;
+            if(num<1)
+            num=7;
+            document.getElementById("gallery").src="img/img"+num+".png";
+        }
+    </script>
+</head>
+<body>
+    <h1>♥갤 러 리♡</h1>
+
+<img src="img/img1.png" alt="그림" id="gallery"><br>
+<button onclick="prevGallery()">♨이전♨</button>&emsp;&emsp;&emsp;&emsp;&emsp;
+<button onclick="nextGallery()">♨다음♨</button>
+
+
+</body>
+</html>

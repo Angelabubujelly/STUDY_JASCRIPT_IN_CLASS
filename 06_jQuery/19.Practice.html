@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var color1 = {"color":"blue"};
+            var color2 = {"color":"green"};
+            var color3 = {"color":"red"};
+            var border = {"border":"1px dotted orange"}
+            var bgColor = {"background-color":"honeydew"};
+         
+            $(".test1").prev().css(color1);
+        $(".test1").next().css(color2);
+        $("#ul2 li:nth-child(2n)").css(border);
+        $("h2").parents().css(bgColor);
+        $("div >h2").css(color3);
+    });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>내용1</li>
+        <li class="test1">내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <ul id="ul2">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <div>
+        <h2>사랑행♡</h2>
+        <h3>화이팅!</h3>
+    </div>
+</body>
+</html>

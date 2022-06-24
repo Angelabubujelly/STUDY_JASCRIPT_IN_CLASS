@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+        // $("li").eq(0).after("<li>After</li>");
+        // $("li").eq(0).before("<li>Before</li>")
+        $("<li>After</il>").insertAfter("li:eq(0)");
+        $("<li>Before</il>").insertBefore("li:eq(0)");
+            $("ul").append("<li>맨 앞에 새글씨 삽입</li>");
+            $("ul").prepend("<li>맨 뒤에 새글씨 삽입</li>")
+        });
+    </script>
+</head> 
+<body>
+    <ul>
+        <li>리스트</li>
+    </ul>
+
+</body>
+</html>

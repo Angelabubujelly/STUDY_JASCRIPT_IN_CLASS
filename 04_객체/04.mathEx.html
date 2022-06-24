@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{color: lightgreen;}
+        h2{color: lightpink}
+        h3{color: red;}
+        body{color: lightblue;}
+</style>
+    <script>
+        var today = new Date();
+        var nowMonth = today.getMonth() +1;
+        var nowDay = today.getDay();
+        var dayString="";
+    document.write("<h1>오늘 당신과 어울리는 푸딩은? </h1>")
+        switch(nowDay){
+            case 0: dayString = '일'; 
+            document.write("<Img src=\"img/초코푸딩.PNG\">")
+                document.write('<h2>'+dayString+'요일엔...</h2><br>달콤한 꿈같이 환상적인 "행인두부"<br>');
+                break;
+            case 1: dayString = '월'; 
+            document.write("<Img src=\"img/행인두부.PNG\">")
+                document.write('<h2>'+dayString+'요일엔...</h2><br>달콤한 꿈같이 환상적인 "행인두부"<br>');
+                break;
+            case 2: dayString = '화'; 
+            document.write("<Img src=\"img/과일푸딩.PNG\">")
+                document.write('<h2>'+dayString+'요일엔...</h2><br>다양한"과일푸딩"<br>');
+                break;
+            case 3: dayString = '수'; 
+            document.write("<Img src=\"img/석류푸딩.PNG\">")
+                document.write('<h2>'+dayString+'요일엔...</h2><br>미남이 좋아한다는ㅋ"석류푸딩"<br>');
+            break;
+            case 4: dayString = '목';
+            document.write("<Img src=\"img/엉덩이푸딩.PNG\">")
+                document.write('<h2>'+dayString+'요일엔...</h2><br>탱글탱글"엉덩이푸딩"<br>');
+             break;
+            case 5: dayString = '금'; 
+            document.write("<Img src=\"img/커스터드크림.PNG\">")
+                document.write('<h2>'+dayString+'요일엔...</h2><br>부드러운 "커스터드 푸딩"<br>');
+            break;
+            case 6: dayString = '토'; 
+            document.write("<Img src=\"img/과일푸딩.PNG\">")
+                document.write('<h2>'+dayString+'요일엔...</h2><br>상큼한 "과일푸딩"<br>');
+                break;
+        }
+document.write("<br>")
+document.write("<h1>컴퓨터와의 우 정 테 스 트♡ </h1>");
+
+	var game = prompt("가위, 바위, 보 중 하나를 입력하세요.", "가위");
+	var gameNum;
+	switch(game) {
+		case "가위": gameNum = 1;
+		break;
+		case "바위": gameNum = 2;
+		break;
+		case "보": gameNum = 3;
+		break;
+		default: alert("다시 입력하세요ㅡㅡ");
+		location.reload();
+	}
+
+	var com = Math.ceil( Math.random() * 3 );
+
+
+	if(gameNum == com) {
+		document.write("<img src=\"img/하트.png\"><br><br>천생연분이에용♥");
+	} else {
+		document.write("<img src=\"img/이별.png\"><br><br>다시 도전하세요!");
+    }
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

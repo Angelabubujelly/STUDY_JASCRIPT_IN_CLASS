@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+$(function(){
+    //              #sc1의 하위에 있는 모든것을 가져오시오!
+    var result_1 = $("#sc1").html();
+    console.log(result_1);
+    // #sc1의 p의 하위 요소에 들어있는 내용1 대신에 ""를 넣어주쇼.
+    // ""랑 ''구분 잘해서 넣어주는거 잊 지 마 숑 \"이거 넣으면 이스케이프 문자로 ""넣어달라는 뜻임 
+     $("#sc1 p").html("새글씨");
+    // $("#sc1 p").html("<a href='30.filter.html'>파일 30번 연결</a>");
+
+    // .html()과는 다르게 text내용만 가져옴.
+    var result_2 = $("#sc2").text();
+    console.log(result_2);
+    $("#sc2 h2").text("열려라 대문");
+    
+});
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <section id="sc1">
+        <h2>html()</h2>
+        <p>내용1</p>
+    </section>
+    <section id="sc2">
+        <h2>text()</h2>
+        <p>내용2</p>
+    </section>
+</body>
+</html>

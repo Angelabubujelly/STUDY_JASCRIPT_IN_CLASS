@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var bgColor1 = {"background-color":"lightblue"}
+            var color1 = {"color":"blue"}
+            var border2 = {"border":"2px dotted green"}
+            var bgColor2 = {"background-color":"yellow"}
+            var color2 = {"color":"orange"}
+            var bgBorder = {"background-color":"lightblue","border":"2px solid lightgreen"}
+            $("#test1 li").eq(2).css(color1);
+            $("#test1 li:eq(0)").css(color2);
+            $("li:gt(3)").css(bgColor1);
+            $("#test2 li:lt(1)").css(border2);
+            $("#test2 li:gt(2)").css(color2);
+        });
+    </script>
+</head>
+<body>
+    <h1>위치 탐색 선택자</h1>
+    <ul id="test1">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <ul id="test2">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+
+
+</body>
+</html>

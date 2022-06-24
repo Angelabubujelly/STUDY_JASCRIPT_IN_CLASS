@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var bgColor1 = {"background-color":"lightsalmon"}
+            var bgColor2 = {"background-color":"yellow"}
+            var color1 = {"color":"blue"}
+            var color2 = {"color":"red"}
+            var border = {"border":"2px dotted lavender"}
+            var bgBorder = {"background-color":"lightblue","border":"2px solid lightgreen"}
+         
+            //                      true, false로...
+         var result_1 = $("section p").eq(0).is(":visible");
+        console.log(result_1);
+        var result_2 = $("section p").eq(1).is(":visible");
+        console.log(result_2);
+        var result_3 = $("#chk1").is(":checked");
+        console.log(result_3);
+        var result_4 = $("chk2").is(":checked");
+        console.log(result_4);
+
+        if(result_3) {
+            $("#label1").css(bgColor2);
+        }
+        });
+    </script>
+</head>
+<body>
+    <h1>is()</h1>
+    <section >
+        <h2>문단태그</h2>
+        <p>내용1</p>
+        <p style="display:none;">내용2</p>
+        <form action="">
+            <h2>폼태그</h2>
+           <input type="checkbox" name="chk1" id="chk1" checked>&ensp;
+           <label for="chk1" id="label1">체크1</label><br>
+            <input type="checkbox" name="chk2" id="chk2" >
+            <label for="chk2">&ensp;체크2</label>
+        </form>
+    </section>
+</body>
+</html>

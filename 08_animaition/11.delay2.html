@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: beige;}
+        div{width:100px; height: 100px; background-color: lightcyan; position: relative;}
+    </style>
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script>
+          $(function(){
+              $("div").each(function(index){
+                  $(this).delay(index*500).animate({left:500},1000)
+              
+              })
+              
+          })
+      </script>
+
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+// 문서에. 키다운을 연결하고, 키다운이 되면,function을 수행한다.
+$(document).on("keydown",function(e)    {
+        var direct ="";
+switch(e.keyCode){
+    case 37:
+        direct="LEFT"; //다이렉트에 레프트를 넣으란느게 먼소리여
+        break;
+        case 38:
+            direct="TOP";
+            break;
+            case 39:
+                direct="RIGHT";
+                break;
+                case 40:
+                    direct="BOTOOM";
+}
+            if(direct)
+//만약 direct값이 들어온다면 value값에 direct를 넣어준다,,,
+//그래서 인풋창에 다이렉트의 스트링값이 뜨는겨...
+            $("#user_id").val(direct);
+})   
+});
+    </script>
+</head>
+<body>
+    <p><input type="text" id="user_id"></p>
+</body>
+</html>

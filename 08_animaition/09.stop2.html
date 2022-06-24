@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{width: 150px;}
+        .txt1{background-color: lavenderblush;}
+        .txt2{background-color: lightcyan;}
+        .txt3{background-color: lightgoldenrodyellow;}
+    </style>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+$(function(){
+   
+    function moveElement(){
+        // queue에 차곡차곡 쌓이는 animate 세미콜론 신경쓰삼
+        $(".txt1").animate({marginLeft:'+=50'},500)
+                  .animate({opacity:0.3},1000);
+
+        $(".txt2").animate({marginLeft:'+=50'},500)
+                        .animate({width:300},500)
+         $(".txt2").stop();
+
+        $(".txt3").animate({marginLeft:'+=50'},500);
+        $(".txt3").stop(true,true);
+    }
+    $(".btn1").on("click",moveElement);
+    $(".btn2").on("click",moveElement);
+    $(".btn3").on("click",moveElement);
+})
+    </script>
+</head>
+<body>
+    <p><button class="btn1">50px 전진</button></p>
+    <p class="txt1">효과1</p>
+    <p class="txt2">효과2<br>stop()</p>
+    <p class="txt3">효과3<br>stop(true, true)</p>
+</body>
+</html>

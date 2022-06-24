@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        //부모요소는 ul이라 ul에 테두리 생긴
+        $("#list_1_1").parent().css("border","2px solid red");
+    });
+</script>
+</head>
+<body>
+    <h1>인접관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트1
+            <ul>
+                <li id="list_1_1">리스트1-1</li>
+                <li>리스트1-2</li>
+                <li>리스트1-3</li>
+            </ul>
+        </li>
+        <li>리스트3</li>
+        <li>리스트3</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 0; // 전역변수
+        function menu(){
+            num+=100;
+            var num = 20; //지역변수... 전역변수가 우선순위 더 높음!
+            alert(num);
+        }
+        menu();
+        function menu2(){
+            alert(num);
+        }
+        menu2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     var today = new Date();
+        var nowMonth = today.getMonth()+1;
+        nowDate = today.getDate();
+        nowDay = today.getDay();
+        var dayString = "";
+        switch(nowDay) {
+            case 0: dayString ='일';break;
+            case 1: dayString='월' ;break;
+            case 2: dayString='화';break;
+            case 3: dayString='수';break;
+            case 4: dayString='목';break;
+            case 5: dayString='금';break;
+            case 6: dayString='토';
+        }
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write("현재 월 : " + nowMonth,"<br>");
+        document.write("현재 일 : " + nowDate,"<br>");
+        document.write("현재 요일 : " + dayString,"<br>");
+
+            var schoolStart = new Date(2022,03,13);
+            var StartMonth = SchoolStart.getMonth()+1;
+            var StartDate = ScoolStart.getData();
+            var StartDay = schoolStart.getDay();
+            document.write('<p>'+ StartMonth + '월</p>');
+            document.write('<p>'+ StartDate + '월</p>');
+            document.write('<p>'+ StartDay + '요일</p>');
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
